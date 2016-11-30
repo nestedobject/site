@@ -1,0 +1,43 @@
+// Typography Choices
+
+$sans-serif-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$code-font: Menlo, Monaco, "Courier New", monospace;
+
+// Color Choices
+$background-blue: #2b3e50;
+$green: #32CD32;
+$lime-green: #67E209;
+$bright-blue: #4A1BD6;
+$fuscia: #B71745;
+$brown: #2D291D;
+$bright-purple: #DB0AD7;
+$soft-green: #B4E391;
+$teal: #05B8C9;
+$dark-grey: #222;
+$white: #fff;
+
+// Colors from clrs.cc
+$navy: #001F3F;
+$blue: #0074D9;
+$aqua: #7FDBFF;
+$olive: #3D9970;
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$purple: #B10DC9;
+$maroon: #85144B;
+$silver: #ddd;
+$gray: #aaa;
+$black: #111;
+
+
+// Mixins
+@mixin bg() {
+  background: -moz-linear-gradient(25deg,  #67e209 0%, #4a1bd6 22%, #b71745 41%, #2d291d 61%, #db0ad7 81%, #b4e391 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#67e209), color-stop(22%,#4a1bd6), color-stop(41%,#b71745), color-stop(61%,#2d291d), color-stop(81%,#db0ad7), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(25deg,  #67e209 0%,#4a1bd6 22%,#b71745 41%,#2d291d 61%,#db0ad7 81%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(25deg,  #67e209 0%,#4a1bd6 22%,#b71745 41%,#2d291d 61%,#db0ad7 81%,#b4e391 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(25deg,  #67e209 0%,#4a1bd6 22%,#b71745 41%,#2d291d 61%,#db0ad7 81%,#b4e391 100%); /* IE10+ */
+  background: linear-gradient(25deg,  #67e209 0%,#4a1bd6 22%,#b71745 41%,#2d291d 61%,#db0ad7 81%,#b4e391 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67e209', endColorstr='#b4e391',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

@@ -1,0 +1,20 @@
+// Imports
+@import "variables";
+@import "base";
+@import "type";
+@import "code";
+@import "layout";
+@import "header";
+
+h1 a  {
+  color: $black;
+}
+
+.center {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  max-width: 80%;
+  transform: perspective(1px) translateY(-60%);
+}

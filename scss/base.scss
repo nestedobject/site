@@ -1,0 +1,87 @@
+// Body resets
+// Update the foundational and global aspects of the page.
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  font-family: $code-font;
+  font-size: 16px;
+  line-height: 1.5;
+  background: $white;
+  color:  $black;
+  min-height: 100%;
+  @media (min-width: 38em) {
+    font-size: 20px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+// Images
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+// Tables
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid $white;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid $white;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $white;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

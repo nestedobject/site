@@ -1,0 +1,30 @@
+{
+  "name": "nested-object-site",
+  "version": "1.0.0",
+  "description": "First website for Nested Object",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "start": "list dist",
+    "watch": "gulp watch",
+    "test": "xo"
+  },
+  "author": "Paul Molluzzo <paul@molluzzo.com> (http://paul.molluzzo.com)",
+  "license": "MIT",
+  "dependencies": {
+    "list": "^0.8.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "space": true
+  }
+}
