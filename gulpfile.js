@@ -6,9 +6,9 @@ const sass = require('gulp-sass');
 const inlineCSS = require('gulp-inline-css');
 
 gulp.task('sass', function () {
-  return gulp.src('./scss/main.scss')
+  return gulp.src('scss/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('minify', ['sass'], () => {
@@ -24,7 +24,7 @@ gulp.task('assets', () => {
 });
 
 gulp.task('sass:watch', () => {
-  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 gulp.task('minify:watch', () => {
@@ -36,5 +36,5 @@ gulp.task('default', ['sass', 'minify', 'assets'], () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(['./scss/**/*.scss', './src/**/*.html', './src/assets/*.*'], ['sass', 'minify', 'assets']);
+  gulp.watch(['scss/**/*.scss', 'src/**/*.html', 'src/assets/*.*'], ['sass', 'minify', 'assets']);
 });
