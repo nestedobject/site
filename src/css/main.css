@@ -15,7 +15,8 @@ html {
   line-height: 1.5;
   background: #fff;
   color: #111;
-  min-height: 100%; }
+  min-height: 100%;
+  overflow-y: hidden; }
   @media (min-width: 38em) {
     html {
       font-size: 30px; } }
