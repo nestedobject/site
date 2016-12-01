@@ -68,6 +68,7 @@ p {
     overflow-x: hidden; }
     .center span.nested {
       max-width: 0;
+      margin: 0;
       animation-name: stretch;
       animation-duration: 1s;
       animation-timing-function: ease-out;
@@ -102,9 +103,14 @@ p {
 
 @keyframes stretch {
   0% {
-    max-width: 0; }
+    max-width: 0;
+    margin: 0; }
+  1% {
+    max-width: 0;
+    margin: 0 1rem; }
   100% {
-    max-width: 100%; } }
+    max-width: 100%;
+    margin: 0 1rem; } }
 
 @keyframes slideup {
   0% {
