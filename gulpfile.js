@@ -3,7 +3,6 @@
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
-const inlineCSS = require('gulp-inline-css');
 
 gulp.task('sass', function () {
   return gulp.src('scss/main.scss')
@@ -13,7 +12,6 @@ gulp.task('sass', function () {
 
 gulp.task('minify', ['sass'], () => {
   return gulp.src('src/**/*.html')
-    .pipe(inlineCSS())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 });
@@ -21,6 +19,11 @@ gulp.task('minify', ['sass'], () => {
 gulp.task('assets', () => {
   return gulp.src('src/assets/*.*')
     .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('css', ['sass'], () => {
+  return gulp.src('src/css/*.*')
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('sass:watch', () => {
@@ -31,7 +34,7 @@ gulp.task('minify:watch', () => {
   gulp.watch('src/**/*.html', ['minify']);
 });
 
-gulp.task('default', ['sass', 'minify', 'assets'], () => {
+gulp.task('default', ['sass', 'minify', 'assets', 'css'], () => {
   return;
 });
 
