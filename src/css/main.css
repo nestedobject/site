@@ -98,7 +98,7 @@ p {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: paused; }
-  .center:hover .nested, .center:hover .lead, .center:hover .fade {
+  .center:hover .nested, .center:hover .lead, .center:hover .fade, .center:active .nested, .center:active .lead, .center:active .fade {
     animation-play-state: running; }
 
 @keyframes stretch {

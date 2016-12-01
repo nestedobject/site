@@ -65,7 +65,7 @@
     animation-play-state: paused;
   }
 
-  &:hover {
+  &:hover, &:active {
     .nested, .lead, .fade {
       animation-play-state: running;
     }
