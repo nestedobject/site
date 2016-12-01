@@ -589,38 +589,6 @@ header.c {
       width: auto;
       padding-right: .2rem; }
 
-h1 {
-  width: auto; }
-  h1 a {
-    color: #111; }
-    h1 a:hover {
-      text-decoration: none; }
-  h1:before {
-    content: '{'; }
-  h1:after {
-    content: '}'; }
-  h1:after, h1:before {
-    display: inline-block;
-    width: auto;
-    padding: 0 .25rem; }
-
-.center a h1 {
-  width: 0;
-  animation-name: expand;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-play-state: paused; }
-
-@keyframes expand {
-  0% {
-    width: 0; }
-  50% {
-    width: 50%; }
-  100% {
-    width: 100%; } }
-
 .center {
   text-align: center;
   position: relative;
@@ -628,17 +596,66 @@ h1 {
   margin: 0 auto;
   max-width: 80%;
   transform: perspective(1px) translateY(-60%); }
-  .center h1 {
-    width: 0; }
-    .center h1 a {
-      color: #111; }
-      .center h1 a:hover {
-        text-decoration: none; }
-    .center h1:before {
-      content: '{'; }
-    .center h1:after {
-      content: '}'; }
-    .center h1:after, .center h1:before {
-      display: inline-block;
-      width: auto;
-      padding: 0 .25rem; }
+  .center:hover {
+    color: blue !important; }
+  .center h1 a {
+    color: #111; }
+    .center h1 a:hover {
+      text-decoration: none; }
+  .center span {
+    display: inline-block;
+    width: auto;
+    line-height: 2;
+    margin: 0 auto;
+    overflow-x: hidden; }
+    .center span.nested {
+      max-width: 0;
+      animation-name: stretch;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      animation-direction: normal;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-play-state: paused; }
+  .center .lead {
+    line-height: 0;
+    overflow-y: hidden;
+    animation-name: slideup;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused; }
+  .center .fade {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused; }
+  .center:hover .nested, .center:hover .lead, .center:hover .fade {
+    animation-play-state: running; }
+
+@keyframes stretch {
+  0% {
+    max-width: 0; }
+  100% {
+    max-width: 100%; } }
+
+@keyframes slideup {
+  0% {
+    line-height: 0; }
+  100% {
+    line-height: 1.1; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

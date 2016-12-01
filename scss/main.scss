@@ -6,9 +6,6 @@
 @import "layout";
 @import "header";
 
-h1 a  {
-  color: $black;
-}
 
 .center {
   text-align: center;
@@ -17,4 +14,90 @@ h1 a  {
   margin: 0 auto;
   max-width: 80%;
   transform: perspective(1px) translateY(-60%);
+
+  h1 {
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: auto;
+    line-height: 2;
+    margin: 0 auto;
+    overflow-x: hidden;
+    &.nested {
+      max-width: 0;
+      animation-name: stretch;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      animation-direction: normal;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+  }
+
+  .lead {
+    line-height: 0;
+    overflow-y: hidden;
+    animation-name: slideup;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+  }
+
+  .fade {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+  }
+
+  &:hover {
+    .nested, .lead, .fade {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes stretch {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    line-height: 0;
+  }
+  100% {
+    line-height: 1.1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
