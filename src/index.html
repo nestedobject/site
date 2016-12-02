@@ -22,20 +22,15 @@
       {rel: 'icon', href: './assets/android-icon-192x192.png', type: 'image/png'},
     ];
 
-    function createAssetLinks(linkData) {
+    icons.forEach(function(icon) {
       var link = document.createElement('link');
-
-      var keys = Object.keys(linkData);
+      var keys = Object.keys(icon);
 
       keys.forEach(function(key) {
-        link.setAttribute(key, linkData[key]);
+        link.setAttribute(key, icon[key]);
       });
 
       head.append(link);
-    }
-
-    icons.forEach(function(icon) {
-      createAssetLinks(icon);
     });
   </script>
 
