@@ -46,7 +46,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
-.lead {
+p:first-of-type {
   font-size: 1.5rem;
   font-weight: 300; }
 
@@ -81,7 +81,7 @@ body span {
     animation-fill-mode: forwards;
     animation-play-state: paused; }
 
-body .lead {
+body p:first-of-type {
   line-height: 0;
   overflow-y: hidden;
   animation-name: slideup;
@@ -93,7 +93,7 @@ body .lead {
   animation-fill-mode: forwards;
   animation-play-state: paused; }
 
-body .fade {
+body p:last-of-type {
   opacity: 0;
   animation-name: fadein;
   animation-duration: 1s;
