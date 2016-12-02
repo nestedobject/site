@@ -6,7 +6,7 @@ const sass = require('gulp-sass');
 
 gulp.task('sass', function () {
   return gulp.src('scss/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('src/css'));
 });
 
@@ -23,7 +23,6 @@ gulp.task('assets', () => {
 
 gulp.task('css', ['sass'], () => {
   return gulp.src('src/css/*.*')
-    .pipe(sass({outputStyle: 'compressed'})
     .pipe(gulp.dest('dist/css'));
 });
 
