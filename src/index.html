@@ -5,13 +5,6 @@
   <title>{{ nestedObject }}</title>
   <meta description="Nested Object is a web development agency specializing in building custom e-commerce applications and interactive websites.">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
-
-  <!-- favicons -->
-  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="./assets/android-icon-192x192.png">
-
 </head>
 <body ontouchstart="">
   <div>
@@ -19,5 +12,32 @@
     <p class="lead">Nested Object is a web development agency specializing in building custom e-commerce applications and interactive websites.</p>
     <p class="fade">For project inquiries: <a href="mailto:new@nestedobject.com">new@nestedobject.com</a></p>
   </div>
+
+  <script type="text/javascript">
+    var head = document.querySelector('head');
+    var icons = [
+      {rel: 'icon', href: './assets/favicon.ico', type: 'image/x-icon'},
+      {rel: 'apple-touch-icon', href: './assets/apple-icon-57x57.png', type: 'image/png', sizes: '57x57'},
+      {rel: 'apple-touch-icon', href: './assets/apple-icon-180x180.png', type: 'image/png', sizes: '180x180'},
+      {rel: 'icon', href: './assets/android-icon-192x192.png', type: 'image/png'},
+    ];
+
+    function createAssetLinks(linkData) {
+      var link = document.createElement('link');
+
+      var keys = Object.keys(linkData);
+
+      keys.forEach(function(key) {
+        link.setAttribute(key, linkData[key]);
+      });
+
+      head.append(link);
+    }
+
+    icons.forEach(function(icon) {
+      createAssetLinks(icon);
+    });
+  </script>
+
 </body>
 </html>
