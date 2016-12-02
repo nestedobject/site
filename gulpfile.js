@@ -23,6 +23,7 @@ gulp.task('assets', () => {
 
 gulp.task('css', ['sass'], () => {
   return gulp.src('src/css/*.*')
+    .pipe(sass({outputStyle: 'compressed'})
     .pipe(gulp.dest('dist/css'));
 });
 
