@@ -68,7 +68,7 @@ body {
   }
 
   &:hover, &:active {
-    h1, p {
+    span, p {
       animation-play-state: running;
     }
   }
