@@ -50,57 +50,62 @@ p {
   font-size: 1.5rem;
   font-weight: 300; }
 
-.center {
+body div {
   text-align: center;
   position: relative;
   top: 50%;
   margin: 0 auto;
   max-width: 80%;
   transform: perspective(1px) translateY(-60%); }
-  .center h1 a {
-    color: #111; }
-    .center h1 a:hover {
-      text-decoration: none; }
-  .center span {
-    display: inline-block;
-    width: auto;
-    line-height: 2;
-    margin: 0 auto;
-    overflow-x: hidden; }
-    .center span.nested {
-      max-width: 0;
-      margin: 0;
-      animation-name: stretch;
-      animation-duration: 1s;
-      animation-timing-function: ease-out;
-      animation-delay: 0s;
-      animation-direction: normal;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      animation-play-state: paused; }
-  .center .lead {
-    line-height: 0;
-    overflow-y: hidden;
-    animation-name: slideup;
+
+body h1 a {
+  color: #111; }
+  body h1 a:hover {
+    text-decoration: none; }
+
+body span {
+  display: inline-block;
+  width: auto;
+  line-height: 2;
+  margin: 0 auto;
+  overflow-x: hidden; }
+  body span.nested {
+    max-width: 0;
+    margin: 0;
+    animation-name: stretch;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-delay: .5s;
+    animation-delay: 0s;
     animation-direction: normal;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: paused; }
-  .center .fade {
-    opacity: 0;
-    animation-name: fadein;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-play-state: paused; }
-  .center:hover .nested, .center:hover .lead, .center:hover .fade, .center:active .nested, .center:active .lead, .center:active .fade {
-    animation-play-state: running; }
+
+body .lead {
+  line-height: 0;
+  overflow-y: hidden;
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: .5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; }
+
+body .fade {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; }
+
+body:hover h1, body:hover p, body:active h1, body:active p {
+  animation-play-state: running; }
 
 @keyframes stretch {
   0% {
