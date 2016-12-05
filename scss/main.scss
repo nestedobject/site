@@ -10,7 +10,11 @@ body {
     top: 50%;
     margin: 0 auto;
     max-width: 80%;
-    transform: perspective(1px) translateY(-60%);
+    transform: perspective(1px) translateY(-50%);
+    padding: 3rem 0;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
   }
 
   h1 {
@@ -24,53 +28,74 @@ body {
 
   span {
     display: inline-block;
-    width: auto;
     line-height: 2;
     margin: 0 auto;
     overflow-x: hidden;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    &:not(.nested) {
+      width: 2.5rem;
+      animation-name: shrink;
+      animation-delay: 0s;
+      animation-duration: .25s;
+
+      &::after {
+        content: '{';
+        display: inline;
+      }
+      &:last-of-type::after {
+        content: '}';
+      }
+    }
+
     &.nested {
       max-width: 0;
       margin: 0;
       animation-name: stretch;
       animation-duration: 1s;
-      animation-timing-function: ease-out;
-      animation-delay: 0s;
-      animation-direction: normal;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      animation-play-state: paused;
+      animation-delay: 0.3s;
     }
   }
 
-  p:first-of-type {
-    line-height: 0;
-    overflow-y: hidden;
-    animation-name: slideup;
+  p {
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-delay: .5s;
     animation-direction: normal;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: paused;
+
+    &:first-of-type {
+      line-height: 0;
+      overflow-y: hidden;
+      animation-name: slideup;
+      animation-delay: .5s;
+    }
+
+    &:last-of-type {
+      opacity: 0;
+      animation-name: fadein;
+      animation-delay: 1s;
+    }
   }
 
-  p:last-of-type {
-    opacity: 0;
-    animation-name: fadein;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-  }
-
-  &:hover, &:active {
+  div:hover, div:active {
     span, p {
       animation-play-state: running;
     }
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 2.25rem;
+  }
+  100% {
+    width: 1rem;
   }
 }
 
@@ -78,12 +103,10 @@ body {
   0% {
     max-width: 0;
     margin: 0;
-
   }
   1% {
     max-width: 0;
     margin: 0 1rem;
-
   }
   100% {
     max-width: 100%;
@@ -97,6 +120,7 @@ body {
   }
   100% {
     line-height: 1.1;
+    margin-bottom: .5rem;
   }
 }
 
