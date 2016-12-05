@@ -2,6 +2,9 @@
   "name": "nested-object-site",
   "version": "1.0.0",
   "description": "First website for Nested Object",
+  "engines": {
+    "node": "6.9.1"
+  },
   "main": "index.js",
   "scripts": {
     "build": "gulp",
