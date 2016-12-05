@@ -1,1 +1,174 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html,body{margin:0;padding:0;height:100%}html{font-family:Menlo,Monaco,"Courier New",monospace;font-size:16px;line-height:1.5;color:#111;min-height:100%;overflow-y:hidden}@media (min-width: 38em){html{font-size:30px}}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a{text-decoration:none;color:#0074D9}a:hover{color:#fff;background:#0074D9}h1{margin-bottom:.5rem;font-weight:bold;line-height:1.25;text-rendering:optimizeLegibility;font-size:2rem}p{margin:0}p:first-of-type{font-size:1.5rem;font-weight:300}body div{text-align:center;position:relative;top:50%;margin:0 auto;max-width:80%;transform:perspective(1px) translateY(-50%);padding:3rem 0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}body h1 a{color:#111}body h1 a:hover{text-decoration:none}body span{display:inline-block;line-height:2;margin:0 auto;overflow-x:hidden;animation-timing-function:linear;animation-direction:normal;animation-iteration-count:1;animation-fill-mode:forwards;animation-play-state:paused}body span:not(.nested){width:2.5rem;animation-name:shrink;animation-delay:0s;animation-duration:.25s}body span:not(.nested)::after{content:'{';display:inline}body span:not(.nested):last-of-type::after{content:'}'}body span.nested{max-width:0;margin:0;animation-name:stretch;animation-duration:1s;animation-delay:0.3s}body p{animation-duration:1s;animation-timing-function:ease-out;animation-direction:normal;animation-iteration-count:1;animation-fill-mode:forwards;animation-play-state:paused}body p:first-of-type{line-height:0;overflow-y:hidden;animation-name:slideup;animation-delay:.5s}body p:last-of-type{opacity:0;animation-name:fadein;animation-delay:1s}body div:hover span,body div:hover p,body div:active span,body div:active p{animation-play-state:running}@keyframes shrink{0%{width:2.25rem}100%{width:1rem}}@keyframes stretch{0%{max-width:0;margin:0}1%{max-width:0;margin:0 1rem}100%{max-width:100%;margin:0 1rem}}@keyframes slideup{0%{line-height:0}100%{line-height:1.1;margin-bottom:.5rem}}@keyframes fadein{0%{opacity:0}100%{opacity:1}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+  min-height: 100%;
+  overflow-y: hidden;
+}
+
+@media (min-width: 38em) {
+  html {
+    font-size: 30px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #0074D9;
+}
+a:hover {
+  color: #fff;
+  background: #0074D9;
+}
+
+h1 {
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+}
+
+p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+body div {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  max-width: 80%;
+  transform: perspective(1px) translateY(-50%);
+  padding: 3rem 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+body span {
+  display: inline-block;
+  line-height: 2;
+  margin: 0 auto;
+  overflow-x: hidden;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+body span:not(.nested) {
+  width: 2.5rem;
+  animation-name: shrink;
+  animation-delay: 0s;
+  animation-duration: .25s;
+}
+
+body span:not(.nested)::after {
+  content: '{';
+  display: inline;
+}
+body span:not(.nested):last-of-type::after {
+  content: '}';
+}
+
+body span.nested {
+  max-width: 0;
+  margin: 0;
+  animation-name: stretch;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+
+body p {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+body p:first-of-type {
+  line-height: 0;
+  overflow-y: hidden;
+  animation-name: slideup;
+  animation-delay: .5s;
+}
+body p:last-of-type {
+  opacity: 0;
+  animation-name: fadein;
+  animation-delay: 1s;
+}
+
+body div:hover span, body div:hover p, body div:active span, body div:active p {
+  animation-play-state: running;
+}
+
+@keyframes shrink {
+  0% {
+    width: 2.25rem;
+  }
+  100% {
+    width: 1rem;
+  }
+}
+
+@keyframes stretch {
+  0% {
+    max-width: 0;
+    margin: 0;
+  }
+  1% {
+    max-width: 0;
+    margin: 0 1rem;
+  }
+  100% {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    line-height: 0;
+  }
+  100% {
+    line-height: 1.1;
+    margin-bottom: .5rem;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

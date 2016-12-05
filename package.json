@@ -19,7 +19,6 @@
     "gulp": "^3.9.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-inline-source": "^3.0.0",
-    "gulp-sass": "^2.3.2",
     "xo": "^0.17.1"
   },
   "xo": {
