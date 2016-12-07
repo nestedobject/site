@@ -93,6 +93,7 @@ body span:not(.nested)::after {
   content: '{';
   display: inline;
 }
+
 body span:not(.nested):last-of-type::after {
   content: '}';
 }
@@ -120,13 +121,17 @@ body p:first-of-type {
   animation-name: slideup;
   animation-delay: .5s;
 }
+
 body p:last-of-type {
   opacity: 0;
   animation-name: fadein;
   animation-delay: 1s;
 }
 
-body div:hover span, body div:hover p, body div:active span, body div:active p {
+body div:hover span,
+body div:hover p,
+body div:active span,
+body div:active p {
   animation-play-state: running;
 }
 
