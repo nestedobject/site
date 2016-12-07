@@ -7,7 +7,6 @@
 html,
 body {
   margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -17,12 +16,11 @@ html {
   line-height: 1.5;
   color: #111;
   min-height: 100%;
-  overflow-y: hidden;
 }
 
 @media (min-width: 38em) {
   html {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
@@ -40,37 +38,44 @@ a:hover {
   background: #0074D9;
 }
 
-h1 {
-  margin-bottom: .5rem;
+h1, h2 {
+  margin: 0 0 .5rem;
   font-weight: bold;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 p {
   margin: 0;
+  font-size: 1.25rem;
 }
 
-p:first-of-type {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-body div {
+header {
   text-align: center;
-  position: relative;
+  position: absolute;
   top: 50%;
+  right: 0;
+  left: 0;
   margin: 0 auto;
-  max-width: 80%;
   transform: perspective(1px) translateY(-50%);
-  padding: 3rem 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  padding: 40% 0;
+  z-index: 1;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-name: moveup;
 }
 
-body span {
+header span {
   display: inline-block;
   line-height: 2;
   margin: 0 auto;
@@ -82,23 +87,23 @@ body span {
   animation-play-state: paused;
 }
 
-body span:not(.nested) {
+header span:not(.nested) {
   width: 2.5rem;
   animation-name: shrink;
   animation-delay: 0s;
   animation-duration: .25s;
 }
 
-body span:not(.nested)::after {
+header span:not(.nested)::after {
   content: '{';
   display: inline;
 }
 
-body span:not(.nested):last-of-type::after {
+header span:not(.nested):last-of-type::after {
   content: '}';
 }
 
-body span.nested {
+header span.nested {
   max-width: 0;
   margin: 0;
   animation-name: stretch;
@@ -106,7 +111,11 @@ body span.nested {
   animation-delay: 0.3s;
 }
 
-body p {
+section {
+  padding: 1rem;
+}
+
+h2, p, ul {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-direction: normal;
@@ -115,24 +124,71 @@ body p {
   animation-play-state: paused;
 }
 
-body p:first-of-type {
-  line-height: 0;
-  overflow-y: hidden;
-  animation-name: slideup;
-  animation-delay: .5s;
-}
-
-body p:last-of-type {
+h2, p, ul {
   opacity: 0;
   animation-name: fadein;
   animation-delay: 1s;
 }
 
-body div:hover span,
-body div:hover p,
-body div:active span,
-body div:active p {
+.clients {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.clients li {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 6rem;
+  height: auto;
+}
+
+.clients li svg {
+  display: inline-block;
+}
+
+.social {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  width: auto;
+  min-width: 30px;
+  margin-right: 1rem;
+}
+
+header:hover,
+header:hover span,
+header:hover ~ section h2,
+header:hover ~ section p,
+header:hover ~ section ul,
+header:active,
+header:active span,
+header:active ~ section h2,
+header:active ~ section p,
+header:active ~ section ul {
   animation-play-state: running;
+}
+
+@keyframes moveup {
+  0% {
+    top: 50%;
+  }
+  100% {
+    position: relative;
+    top: 0;
+    padding: 0;
+    transform: perspective(0) translateY(0);
+  }
 }
 
 @keyframes shrink {
