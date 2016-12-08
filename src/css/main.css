@@ -295,17 +295,17 @@ header:active ~ section {
 }
 
 @keyframes fill {
-    0% { fill: #001f3f }
-   10% { fill: #0074D9 }
-   20% { fill: #39CCCC }
-   30% { fill: #3D9970 }
-   40% { fill: #2ECC40 }
-   50% { fill: #01FF70 }
-   60% { fill: #FFDC00 }
-   70% { fill: #FF851B }
-   80% { fill: #FF4136 }
-   90% { fill: #F012BE }
-  100% { fill: #001f3f }
+    0% { fill: #001f3f; }
+   10% { fill: #0074D9; }
+   20% { fill: #39CCCC; }
+   30% { fill: #3D9970; }
+   40% { fill: #2ECC40; }
+   50% { fill: #01FF70; }
+   60% { fill: #FFDC00; }
+   70% { fill: #FF851B; }
+   80% { fill: #FF4136; }
+   90% { fill: #F012BE; }
+  100% { fill: #001f3f; }
 }
 
 @keyframes saw {
