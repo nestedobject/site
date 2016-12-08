@@ -143,7 +143,7 @@ section {
 }
 
 .sawtooth {
-  background-color: #FF4136;
+  background-color: #7FDBFF;
   margin-left: -5%;
   margin-top: -1rem;
   width: 110%;
@@ -163,7 +163,8 @@ section {
 .sawtooth::before,
 .sawtooth::after {
   content: '';
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iI0ZGNDEzNiI+PC9wYXRoPgo8L3N2Zz4=");
+  /* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iI0ZGNDEzNiI+PC9wYXRoPgo8L3N2Zz4="); */
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iIzdGREJGRiI+PC9wYXRoPgo8L3N2Zz4=");
   background-size: auto 35px;
   background-repeat: repeat-x;
   position: absolute;
