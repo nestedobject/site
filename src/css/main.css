@@ -112,13 +112,14 @@ header span.nested {
   animation-delay: 0.3s;
 }
 
-section {
+section > div {
+  max-width: 40rem;
+  margin: 0 auto;
   padding: 1rem;
 }
 
-h2,
-p,
-ul {
+section {
+  position: relative;
   opacity: 0;
   animation-duration: .75s;
   animation-timing-function: ease-out;
@@ -128,6 +129,50 @@ ul {
   animation-play-state: paused;
   animation-name: fadein;
   animation-delay: 1s;
+}
+
+.sawtooth {
+  background-color: #FF4136;
+  -webkit-transform: perspective(1px) rotate(-1deg);
+     -moz-transform: perspective(1px) rotate(-1deg);
+       -o-transform: perspective(1px) rotate(-1deg);
+          transform: perspective(1px) rotate(-1deg);
+}
+
+.sawtooth div {
+  -webkit-transform: perspective(1px) rotate(1deg);
+     -moz-transform: perspective(1px) rotate(1deg);
+       -o-transform: perspective(1px) rotate(1deg);
+          transform: perspective(1px) rotate(1deg);
+}
+
+.sawtooth::before,
+.sawtooth::after {
+  content: '';
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iI0ZGNDEzNiI+PC9wYXRoPgo8L3N2Zz4=");
+  background-size: auto 35px;
+  background-repeat: repeat-x;
+  position: absolute;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  animation-duration: .75s, 1s;
+  animation-timing-function: ease-out, linear;
+  animation-iteration-count: 1, infinite;
+  animation-name: fadein, saw;
+}
+
+.sawtooth::before {
+  top: -35px;
+}
+
+.sawtooth::after {
+  animation-direction: normal, reverse;
+  bottom: -35px;
+  -webkit-transform: scaleY(-1);
+     -moz-transform: scaleY(-1);
+       -o-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 .clients {
@@ -187,14 +232,10 @@ ul {
 
 header:hover,
 header:hover span,
-header:hover ~ section h2,
-header:hover ~ section p,
-header:hover ~ section ul,
+header:hover ~ section,
 header:active,
 header:active span,
-header:active ~ section h2,
-header:active ~ section p,
-header:active ~ section ul {
+header:active ~ section {
   animation-play-state: running;
 }
 
@@ -265,4 +306,9 @@ header:active ~ section ul {
    80% { fill: #FF4136 }
    90% { fill: #F012BE }
   100% { fill: #001f3f }
+}
+
+@keyframes saw {
+    0% { background-position-x: 0px; }
+  100% { background-position-x: 35px; }
 }
