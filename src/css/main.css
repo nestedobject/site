@@ -38,7 +38,8 @@ a:hover {
   background: #0074D9;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0 0 .5rem;
   font-weight: bold;
   line-height: 1.25;
@@ -115,17 +116,16 @@ section {
   padding: 1rem;
 }
 
-h2, p, ul {
+h2,
+p,
+ul {
+  opacity: 0;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: paused;
-}
-
-h2, p, ul {
-  opacity: 0;
   animation-name: fadein;
   animation-delay: 1s;
 }
