@@ -120,7 +120,7 @@ h2,
 p,
 ul {
   opacity: 0;
-  animation-duration: 1s;
+  animation-duration: .75s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-iteration-count: 1;
