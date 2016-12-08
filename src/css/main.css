@@ -126,7 +126,7 @@ header span.nested {
 section > div {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 section {
