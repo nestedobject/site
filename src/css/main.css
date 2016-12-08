@@ -190,6 +190,11 @@ section {
 }
 
 .clients {
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.clients ul {
   list-style-type: none;
   display: -webkit-box;
   display: -moz-box;
@@ -217,20 +222,20 @@ section {
 .clients polygon {
   fill: #f00;
   animation-duration: 10s;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-name: fill;
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
 
-.clients li:nth-of-type(1) path, .clients li:nth-of-type(1) polygon { animation-delay: 1s; }
-.clients li:nth-of-type(2) path, .clients li:nth-of-type(2) polygon { animation-delay: 2s; }
-.clients li:nth-of-type(3) path, .clients li:nth-of-type(3) polygon { animation-delay: 3s; }
-.clients li:nth-of-type(4) path, .clients li:nth-of-type(4) polygon { animation-delay: 4s; }
-.clients li:nth-of-type(5) path, .clients li:nth-of-type(5) polygon { animation-delay: 5s; }
+.clients li:nth-of-type(1) path, .clients li:nth-of-type(1) polygon { animation-delay: 0.1s; }
+.clients li:nth-of-type(2) path, .clients li:nth-of-type(2) polygon { animation-delay: 0.3s; }
+.clients li:nth-of-type(3) path, .clients li:nth-of-type(3) polygon { animation-delay: 0.5s; }
+.clients li:nth-of-type(4) path, .clients li:nth-of-type(4) polygon { animation-delay: 0.7s; }
+.clients li:nth-of-type(5) path, .clients li:nth-of-type(5) polygon { animation-delay: 0.9s; }
 
 .point {
   background-color: #2ECC40;
@@ -344,17 +349,17 @@ header:active ~ section {
 }
 
 @keyframes fill {
-    0% { fill: #001f3f; }
-   10% { fill: #0074D9; }
-   20% { fill: #39CCCC; }
-   30% { fill: #3D9970; }
-   40% { fill: #2ECC40; }
-   50% { fill: #01FF70; }
-   60% { fill: #FFDC00; }
-   70% { fill: #FF851B; }
-   80% { fill: #FF4136; }
-   90% { fill: #F012BE; }
-  100% { fill: #001f3f; }
+    0% { fill: #0074D9; }
+   10% { fill: #39CCCC; }
+   20% { fill: #3D9970; }
+   30% { fill: #2ECC40; }
+   40% { fill: #01FF70; }
+   50% { fill: #FFDC00; }
+   60% { fill: #FF851B; }
+   70% { fill: #FF4136; }
+   80% { fill: #F012BE; }
+   90% { fill: #FF851B; }
+  100% { fill: #0074D9; }
 }
 
 @keyframes saw {
