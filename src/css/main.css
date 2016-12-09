@@ -164,7 +164,6 @@ section {
 .sawtooth::before,
 .sawtooth::after {
   content: '';
-  /* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iI0ZGNDEzNiI+PC9wYXRoPgo8L3N2Zz4="); */
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0wIDE1TDcuNSAwTDE1IDE1WiIgZmlsbD0iIzdGREJGRiI+PC9wYXRoPgo8L3N2Zz4=");
   background-size: auto 35px;
   background-repeat: repeat-x;
@@ -276,31 +275,31 @@ section {
   margin-right: 1rem;
 }
 
-header:hover,
-header:hover span,
-header:hover ~ section,
-header:active,
-header:active span,
-header:active ~ section {
+html:hover,
+html:hover *,
+html:active,
+html:active * {
   animation-play-state: running;
+}
+
+@keyframes reveal {
+  0% {
+    overflow-y: hidden;
+    max-height: 100%;
+  }
+  100% {
+    overflow-y: visible;
+    max-height: none;
+  }
 }
 
 @keyframes moveup {
   0% {
     top: 50%;
   }
-  /* 50% {
-    background-color: rgba(255, 255, 255, 0);
-    color: #fff;
-    position: relative;
-    top: 0;
-    padding: 2.5rem 0;
-    transform: perspective(0) translateY(0);
-  } */
   100% {
     background-color: rgba(255, 255, 255, 0);
     color: #fff;
-    /* position: relative; */
     top: 0;
     transform: perspective(0) translateY(0);
   }
