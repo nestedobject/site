@@ -140,7 +140,7 @@ section {
   animation-fill-mode: forwards;
   animation-play-state: paused;
   animation-name: fadein;
-  animation-delay: 1s;
+  animation-delay: 1.55s;
 }
 
 .sawtooth {
