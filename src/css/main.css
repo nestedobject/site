@@ -167,6 +167,7 @@ footer {
   animation-timing-function: ease-out, linear;
   animation-iteration-count: 1, infinite;
   animation-name: fadein, saw;
+  animation-delay: 1.55s, 0;
   -webkit-transform: perspective(1px) rotate(-1deg);
      -moz-transform: perspective(1px) rotate(-1deg);
        -o-transform: perspective(1px) rotate(-1deg);
