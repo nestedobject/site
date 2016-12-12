@@ -3,7 +3,6 @@
 @import "base";
 @import "type";
 
-
 header {
   color: #fff;
   text-align: center;
@@ -349,17 +348,17 @@ html:active * {
 }
 
 @keyframes fill {
-    0% { fill: #0074D9; }
-   10% { fill: #39CCCC; }
-   20% { fill: #3D9970; }
-   30% { fill: #2ECC40; }
-   40% { fill: #01FF70; }
-   50% { fill: #FFDC00; }
-   60% { fill: #FF851B; }
-   70% { fill: #FF4136; }
-   80% { fill: #F012BE; }
-   90% { fill: #FF851B; }
-  100% { fill: #0074D9; }
+    0% { fill: $blue; }
+   10% { fill: $teal; }
+   20% { fill: $olive; }
+   30% { fill: $green; }
+   40% { fill: $lime; }
+   50% { fill: $yellow; }
+   60% { fill: $orange; }
+   70% { fill: $red; }
+   80% { fill: $fuschia; }
+   90% { fill: $orange; }
+  100% { fill: $blue; }
 }
 
 @keyframes saw {
