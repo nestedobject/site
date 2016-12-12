@@ -25,7 +25,7 @@ html {
 
 @media (min-width: 38em) {
   html {
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 
@@ -188,7 +188,7 @@ footer {
 
 .clients {
   color: #fff;
-  padding: 4rem 0;
+  padding: 4rem 0 0;
 }
 
 .clients ul {
