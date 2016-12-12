@@ -160,9 +160,9 @@ footer {
   background-size: auto 100px;
   background-repeat: repeat-x;
   position: absolute;
-  left: 0;
+  left: -5%;
   height: 100px;
-  width: 100%;
+  width: 110%;
   animation-duration: 1.75s, 1s;
   animation-timing-function: ease-out, linear;
   animation-iteration-count: 1, infinite;
@@ -252,9 +252,9 @@ footer {
   background-size: 30px 40px;
   background-repeat: repeat-x;
   position: absolute;
-  left: 0;
+  left: -5%;
   height: 40px;
-  width: 100%;
+  width: 110%;
   animation-direction: normal, alternate;
   animation-duration: 1.75s, 1s;
   animation-timing-function: ease-out, ease-in-out;
