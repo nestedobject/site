@@ -323,17 +323,11 @@ footer ul {
 
 footer li {
   display: inline-block;
-  width: auto;
-  min-width: .5rem;
-  margin-right: 1rem;
-}
-
-footer li {
-  display: inline-block;
   position: relative;
   width: auto;
   min-width: .5rem;
   margin-right: 1rem;
+  margin-left: 0.5rem;
 }
 
 footer li::before {
