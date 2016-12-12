@@ -10,8 +10,8 @@ gulp.task('sass', function () {
   return gulp.src('scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-        browsers: ['last 2 versions', '> 5%', 'iOS 7'],
-        cascade: false
+      browsers: ['last 2 versions', '> 5%', 'iOS 7'],
+      cascade: false
     }))
     .pipe(gulp.dest('src/css'));
 });

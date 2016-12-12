@@ -19,8 +19,8 @@
     "list": "^0.8.2"
   },
   "devDependencies": {
-    "auto-prefixer": "^0.4.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-inline-source": "^3.0.0",
     "gulp-sass": "^2.3.2",
