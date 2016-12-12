@@ -128,13 +128,15 @@ header span.nested {
   animation-delay: 0.3s;
 }
 
-section > div {
+section > div,
+footer > ul {
   max-width: 40rem;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-section {
+section,
+footer {
   position: relative;
   opacity: 0;
   animation-duration: .75s;
@@ -242,12 +244,9 @@ section {
 .clients li:nth-of-type(4) path, .clients li:nth-of-type(4) polygon { animation-delay: 0.7s; }
 .clients li:nth-of-type(5) path, .clients li:nth-of-type(5) polygon { animation-delay: 0.9s; }
 
-.point {
+.point,
+footer {
   background-color: #2ECC40;
-}
-
-.point > div {
-  padding: 3rem 1rem;
 }
 
 .point::before,
@@ -280,14 +279,76 @@ section {
 
 .social {
   list-style-type: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: left;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
   padding: 0;
 }
 
 .social li {
   display: inline-block;
   width: auto;
-  min-width: 30px;
+  min-width: 1rem;
   margin-right: 1rem;
+}
+
+footer {
+  color: #111;
+  font-size: .6rem;
+  position: relative;
+  height: 2rem;
+}
+
+footer path,
+footer polygon {
+  fill:  #111;
+}
+
+footer a:hover,
+footer a:hover svg,
+footer a:hover path,
+footer a:hover polygon {
+  background: none;
+  fill:  #fff;
+}
+
+footer ul {
+  position: absolute;
+  right: 0;
+  list-style-type: none;
+  padding: 0 1rem 0.5rem;
+}
+
+footer li {
+  display: inline-block;
+  width: auto;
+  min-width: .5rem;
+  margin-right: 1rem;
+}
+
+footer li {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  min-width: .5rem;
+  margin-right: 1rem;
+}
+
+footer li::before {
+  content: '|';
+  display: inline;
+  position: absolute;
+  right: -0.7rem;
+  width: 3px;
+}
+
+footer li:last-of-type::before {
+  content: '';
 }
 
 html:hover,
