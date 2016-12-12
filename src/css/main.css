@@ -139,7 +139,7 @@ section,
 footer {
   position: relative;
   opacity: 0;
-  animation-duration: .75s;
+  animation-duration: 1.75s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-iteration-count: 1;
@@ -163,7 +163,7 @@ footer {
   left: 0;
   height: 100px;
   width: 100%;
-  animation-duration: .75s, 1s;
+  animation-duration: 1.75s, 1s;
   animation-timing-function: ease-out, linear;
   animation-iteration-count: 1, infinite;
   animation-name: fadein, saw;
@@ -255,7 +255,7 @@ footer {
   height: 40px;
   width: 100%;
   animation-direction: normal, alternate;
-  animation-duration: .75s, 1s;
+  animation-duration: 1.75s, 1s;
   animation-timing-function: ease-out, ease-in-out;
   animation-iteration-count: 1, infinite;
 }
