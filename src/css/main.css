@@ -211,6 +211,12 @@ footer {
   height: auto;
 }
 
+@media (max-width: 30em) {
+  .clients li {
+    max-width: 14rem;
+  }
+}
+
 .clients li svg {
   display: inline-block;
 }
