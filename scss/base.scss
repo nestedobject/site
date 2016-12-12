@@ -1,0 +1,53 @@
+// Body resets
+// Update the foundational and global aspects of the page.
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: rgba(0,32,63,1);
+  background: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+  padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: $code-font;
+  font-size: 16px;
+  line-height: 1.5;
+  color:  $black;
+  min-height: 100%;
+  @media (min-width: 38em) {
+    font-size: 30px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $white;
+    background: $blue;
+    svg {
+      color: $white;
+      background: $blue;
+    }
+    path,
+    polygon {
+      fill: $white;
+    }
+  }
+}
