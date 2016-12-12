@@ -163,7 +163,7 @@ footer {
   left: -5%;
   height: 100px;
   width: 110%;
-  animation-duration: 1.75s, 1s;
+  animation-duration: .25s, 1s;
   animation-timing-function: ease-out, linear;
   animation-iteration-count: 1, infinite;
   animation-name: fadein, saw;
