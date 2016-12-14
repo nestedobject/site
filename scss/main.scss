@@ -14,13 +14,12 @@ header {
   transform: perspective(1px) translateY(-50%);
   padding: 2.5rem 0;
   z-index: 1;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: paused;
-  animation-delay: 0s;
-  animation-duration: 1.5s;
+  animation-duration: 1.75s;
   animation-name: moveup;
 
   span {
@@ -37,16 +36,15 @@ header {
     &.nested {
       max-width: 0;
       margin: 0;
-      animation-name: stretch;
-      animation-duration: 1s;
-      animation-delay: 0.3s;
+      animation-timing-function: linear;
+      animation-name: type;
+      animation-duration: 0.8s;
     }
 
     &:not(.nested) {
       width: 2.5rem;
       animation-name: shrink;
-      animation-delay: 0s;
-      animation-duration: .25s;
+      animation-duration: 0.1s;
     }
 
     &:not(.nested)::after {
@@ -71,14 +69,13 @@ section,
 footer {
   position: relative;
   opacity: 0;
-  animation-duration: 1.75s;
+  animation-duration: 2.25s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: paused;
   animation-name: fadein;
-  animation-delay: 1.55s;
 }
 
 .sawtooth {
@@ -95,11 +92,10 @@ footer {
   left: -5%;
   height: 100px;
   width: 110%;
-  animation-duration: .25s, 1s;
+  animation-duration: 1.25s, 1s;
   animation-timing-function: ease-out, linear;
   animation-iteration-count: 1, infinite;
   animation-name: fadein, saw;
-  animation-delay: 1.55s, 0s;
   -webkit-transform: perspective(1px) rotate(-1deg);
      -moz-transform: perspective(1px) rotate(-1deg);
        -o-transform: perspective(1px) rotate(-1deg);
@@ -158,15 +154,14 @@ footer {
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
       animation-play-state: running;
-      animation-name: fill;
-      animation-delay: 0s;
+      animation-name: fill0;
     }
 
-    &:nth-of-type(1) path, &:nth-of-type(1) polygon { animation-delay: 0.1s; }
-    &:nth-of-type(2) path, &:nth-of-type(2) polygon { animation-delay: 0.3s; }
-    &:nth-of-type(3) path, &:nth-of-type(3) polygon { animation-delay: 0.5s; }
-    &:nth-of-type(4) path, &:nth-of-type(4) polygon { animation-delay: 0.7s; }
-    &:nth-of-type(5) path, &:nth-of-type(5) polygon { animation-delay: 0.9s; }
+    &:nth-of-type(1) path, &:nth-of-type(1) polygon { animation-name: fill1; }
+    &:nth-of-type(2) path, &:nth-of-type(2) polygon { animation-name: fill2; }
+    &:nth-of-type(3) path, &:nth-of-type(3) polygon { animation-name: fill3; }
+    &:nth-of-type(4) path, &:nth-of-type(4) polygon { animation-name: fill4; }
+    &:nth-of-type(5) path, &:nth-of-type(5) polygon { animation-name: fill5; }
   }
 }
 
@@ -186,7 +181,7 @@ footer {
   height: 40px;
   width: 110%;
   animation-direction: normal, alternate;
-  animation-duration: 1.75s, 1s;
+  animation-duration: 2.25s, 1s;
   animation-timing-function: ease-out, ease-in-out;
   animation-iteration-count: 1, infinite;
 }
@@ -296,6 +291,9 @@ html:active * {
   0% {
     top: 50%;
   }
+  10% {
+    top: 50%;
+  }
   100% {
     background-color: rgba(255, 255, 255, 0);
     color: #fff;
@@ -313,13 +311,12 @@ html:active * {
   }
 }
 
-@keyframes stretch {
+@keyframes type {
   0% {
     max-width: 0;
-    margin: 0;
   }
   1% {
-    max-width: 0;
+    max-width: 0rem;
     margin: 0 1rem;
   }
   100% {
@@ -342,12 +339,15 @@ html:active * {
   0% {
     opacity: 0;
   }
+  70% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 
-@keyframes fill {
+@keyframes fill0 {
     0% { fill: $blue; }
    10% { fill: $teal; }
    20% { fill: $olive; }
@@ -359,6 +359,72 @@ html:active * {
    80% { fill: $fuschia; }
    90% { fill: $orange; }
   100% { fill: $blue; }
+}
+
+@keyframes fill1 {
+    0% { fill: $teal; }
+   10% { fill: $olive; }
+   20% { fill: $green; }
+   30% { fill: $lime; }
+   40% { fill: $yellow; }
+   50% { fill: $orange; }
+   60% { fill: $red; }
+   70% { fill: $fuschia; }
+   80% { fill: $orange; }
+   90% { fill: $blue; }
+  100% { fill: $blue; }
+}
+@keyframes fill2 {
+    0% { fill: $olive; }
+   10% { fill: $green; }
+   20% { fill: $lime; }
+   30% { fill: $yellow; }
+   40% { fill: $orange; }
+   50% { fill: $red; }
+   60% { fill: $fuschia; }
+   70% { fill: $orange; }
+   80% { fill: $blue; }
+   90% { fill: $blue; }
+  100% { fill: $teal; }
+}
+@keyframes fill3 {
+    0% { fill: $green; }
+   10% { fill: $lime; }
+   20% { fill: $yellow; }
+   30% { fill: $orange; }
+   40% { fill: $red; }
+   50% { fill: $fuschia; }
+   60% { fill: $orange; }
+   70% { fill: $blue; }
+   80% { fill: $blue; }
+   90% { fill: $teal; }
+  100% { fill: $olive; }
+}
+@keyframes fill4 {
+    0%  { fill: $lime; }
+   10%  { fill: $yellow; }
+   20%  { fill: $orange; }
+   30%  { fill: $red; }
+   40%  { fill: $fuschia; }
+   50%  { fill: $orange; }
+   60%  { fill: $blue; }
+   70%  { fill: $blue; }
+   80%  { fill: $teal; }
+   90%  { fill: $olive; }
+  100%  { fill: $green; }
+}
+@keyframes fill5 {
+    0% { fill: $yellow; }
+   10% { fill: $orange; }
+   20% { fill: $red; }
+   30% { fill: $fuschia; }
+   40% { fill: $orange; }
+   50% { fill: $blue; }
+   60% { fill: $blue; }
+   70% { fill: $teal; }
+   80% { fill: $olive; }
+   90% { fill: $green; }
+  100% { fill: $lime; }
 }
 
 @keyframes saw {
