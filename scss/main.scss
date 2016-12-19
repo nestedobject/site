@@ -235,11 +235,76 @@ footer {
   }
 }
 
+.logo-gate {
+  background-color: transparent;
+  color: $white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  span {
+    background-color: rgba(0,32,63,1);
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 0;
+    transform: perspective(1px) translateY(-50%);
+    z-index: 1;
+    right: 0;
+    width: 4rem;
+    margin: 0 auto 0 -2rem;
+    font-size: 3rem;
+    height: 5rem;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-name: openright;
+  }
+
+  &::before,
+  &::after {
+    background-color: rgba(0,32,63,1);
+    background-color: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    background-color: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    min-height: 100%;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-name: openleft;
+  }
+  &::after {
+    background-color: rgba(0,32,63,1);
+    background-color: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    background-color: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    left: 50%;
+    animation-name: openright;
+  }
+}
+
 // animations
 html:hover,
 html:hover *,
+html:hover *::before,
+html:hover *::after,
 html:active,
-html:active * {
+html:active *,
+html:active *::before,
+html:active *::after {
   animation-play-state: running;
 }
 
@@ -359,4 +424,14 @@ html:active * {
 @keyframes pointwhite {
     0% { background-position: 0 -10px; }
   100% { background-position: 0 -25px; }
+}
+
+@keyframes openleft {
+    0% { left: 0; }
+  100% { left: -1000px; }
+}
+
+@keyframes openright {
+    0% { left: 50%; }
+  100% { left: 1000px; }
 }
