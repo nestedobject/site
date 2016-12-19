@@ -6,54 +6,21 @@
 header {
   color: #fff;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  transform: perspective(1px) translateY(-50%);
-  padding: 2.5rem 0;
-  z-index: 1;
-  animation-timing-function: ease-in;
+  margin: 2rem auto 0;
+  opacity: 0;
+  animation-duration: 2.25s;
+  animation-timing-function: ease-out;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: paused;
-  animation-duration: 1.75s;
-  animation-name: moveup;
+  animation-name: fadein;
 
-  span {
-    display: inline-block;
-    line-height: 2;
-    margin: 0 auto;
-    overflow-x: hidden;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-
-    &.nested {
-      max-width: 0;
-      margin: 0;
-      animation-timing-function: linear;
-      animation-name: type;
-      animation-duration: 0.8s;
-    }
-
-    &:not(.nested) {
-      width: 2.5rem;
-      animation-name: shrink;
-      animation-duration: 0.1s;
-    }
-
-    &:not(.nested)::after {
-      content: '{';
-      display: inline;
-    }
-
-    &:not(.nested):last-of-type::after {
-      content: '}';
+  text {
+    font-size: 2rem;
+    text-anchor: middle;
+      @media (min-width: 38em) {
+      font-size: 1rem;
     }
   }
 }
@@ -284,54 +251,6 @@ html:active * {
   100% {
     overflow-y: visible;
     max-height: none;
-  }
-}
-
-@keyframes moveup {
-  0% {
-    top: 50%;
-  }
-  10% {
-    top: 50%;
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-    color: #fff;
-    top: 0;
-    transform: perspective(0) translateY(0);
-  }
-}
-
-@keyframes shrink {
-  0% {
-    width: 2.25rem;
-  }
-  100% {
-    width: 1rem;
-  }
-}
-
-@keyframes type {
-  0% {
-    max-width: 0;
-  }
-  1% {
-    max-width: 0rem;
-    margin: 0 1rem;
-  }
-  100% {
-    max-width: 100%;
-    margin: 0 1rem;
-  }
-}
-
-@keyframes slideup {
-  0% {
-    line-height: 0;
-  }
-  100% {
-    line-height: 1.1;
-    margin-bottom: .5rem;
   }
 }
 
