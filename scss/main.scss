@@ -18,7 +18,7 @@ body {
   header,
   section,
   footer {
-    height: 0;
+    max-height: 0;
     animation-duration: 0.0001s;
     animation-timing-function: linear;
     animation-direction: normal;
@@ -333,10 +333,10 @@ html:active *::after {
 
 @keyframes show {
   0% {
-    height: 0;
+    max-height: 0;
   }
   100% {
-    height: auto;
+    max-height: 100%;
   }
 }
 
