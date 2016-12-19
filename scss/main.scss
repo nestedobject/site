@@ -7,14 +7,6 @@ header {
   color: #fff;
   text-align: center;
   margin: 2rem auto 0;
-  opacity: 0;
-  animation-duration: 2.25s;
-  animation-timing-function: ease-out;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-  animation-name: fadein;
 
   text {
     font-size: 2rem;
@@ -35,14 +27,6 @@ footer > ul {
 section,
 footer {
   position: relative;
-  opacity: 0;
-  animation-duration: 2.25s;
-  animation-timing-function: ease-out;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-  animation-name: fadein;
 }
 
 .sawtooth {
@@ -147,23 +131,23 @@ footer {
   left: -5%;
   height: 40px;
   width: 110%;
-  animation-direction: normal, alternate;
-  animation-duration: 2.25s, 1s;
-  animation-timing-function: ease-out, ease-in-out;
-  animation-iteration-count: 1, infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .point::before{
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMiAxNiIgdmVyc2lvbj0iMS4xIiBhcmlhLWhpZGRlbj0idHJ1ZSI+CiAgPHBhdGggZmlsbD0iIzJFQ0M0MCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNiAwQzIuNjkgMCAwIDIuNSAwIDUuNSAwIDEwLjAyIDYgMTYgNiAxNnM2LTUuOTggNi0xMC41QzEyIDIuNSA5LjMxIDAgNiAwem0wIDE0LjU1QzQuMTQgMTIuNTIgMSA4LjQ0IDEgNS41IDEgMy4wMiAzLjI1IDEgNiAxYzEuMzQgMCAyLjYxLjQ4IDMuNTYgMS4zNi45Mi44NiAxLjQ0IDEuOTcgMS40NCAzLjE0IDAgMi45NC0zLjE0IDcuMDItNSA5LjA1ek04IDUuNWMwIDEuMTEtLjg5IDItMiAyLTEuMTEgMC0yLS44OS0yLTIgMC0xLjExLjg5LTIgMi0yIDEuMTEgMCAyIC44OSAyIDJ6Ij48L3BhdGg+PC9zdmc+");
   top: -10px;
-  animation-name: fadein, point;
+  animation-name: point;
 }
 
 .point::after{
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMiAxNiIgdmVyc2lvbj0iMS4xIiBhcmlhLWhpZGRlbj0idHJ1ZSI+CiAgPHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNiAwQzIuNjkgMCAwIDIuNSAwIDUuNSAwIDEwLjAyIDYgMTYgNiAxNnM2LTUuOTggNi0xMC41QzEyIDIuNSA5LjMxIDAgNiAwem0wIDE0LjU1QzQuMTQgMTIuNTIgMSA4LjQ0IDEgNS41IDEgMy4wMiAzLjI1IDEgNiAxYzEuMzQgMCAyLjYxLjQ4IDMuNTYgMS4zNi45Mi44NiAxLjQ0IDEuOTcgMS40NCAzLjE0IDAgMi45NC0zLjE0IDcuMDItNSA5LjA1ek04IDUuNWMwIDEuMTEtLjg5IDItMiAyLTEuMTEgMC0yLS44OS0yLTIgMC0xLjExLjg5LTIgMi0yIDEuMTEgMCAyIC44OSAyIDJ6Ij48L3BhdGg+PC9zdmc+");
   top: 0px;
   background-position: 0 -10px;
-  animation-name: fadein, pointwhite;
+  animation-name: pointwhite;
 }
 
 .social {
@@ -254,12 +238,13 @@ footer {
     transform: perspective(1px) translateY(-50%);
     z-index: 1;
     right: 0;
-    width: 4rem;
+    width: 5rem;
     margin: 0 auto 0 -2rem;
     font-size: 3rem;
     height: 5rem;
+    text-align: center;
     animation-direction: normal;
-    animation-duration: 1s;
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -280,7 +265,7 @@ footer {
     height: 100%;
     min-height: 100%;
     animation-direction: normal;
-    animation-duration: 1s;
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -316,18 +301,6 @@ html:active *::after {
   100% {
     overflow-y: visible;
     max-height: none;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -428,10 +401,10 @@ html:active *::after {
 
 @keyframes openleft {
     0% { left: 0; }
-  100% { left: -1000px; }
+  100% { left: -200%; }
 }
 
 @keyframes openright {
     0% { left: 50%; }
-  100% { left: 1000px; }
+  100% { left: 200%; }
 }
