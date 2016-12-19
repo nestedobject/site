@@ -3,6 +3,32 @@
 @import "base";
 @import "type";
 
+html,
+body {
+  max-height: 100%;
+  overflow-y: hidden;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-name: height;
+
+  header,
+  section,
+  footer {
+    height: 0;
+    animation-duration: 0.0001s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-name: show;
+  }
+}
+
 header {
   color: #fff;
   text-align: center;
@@ -293,7 +319,7 @@ html:active *::after {
   animation-play-state: running;
 }
 
-@keyframes reveal {
+@keyframes height {
   0% {
     overflow-y: hidden;
     max-height: 100%;
@@ -301,6 +327,15 @@ html:active *::after {
   100% {
     overflow-y: visible;
     max-height: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: auto;
   }
 }
 
