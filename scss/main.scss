@@ -261,7 +261,8 @@ footer {
   overflow: hidden;
 
   span {
-    background-color: rgba(0,32,63,1);
+    @include border-gradient(top left, to bottom right, $aqua, 0%, $navy, 20%);
+    background-color: $navy;
     display: block;
     position: absolute;
     top:  50%;
@@ -285,9 +286,7 @@ footer {
 
   &::before,
   &::after {
-    background-color: rgba(0,32,63,1);
-    background-color: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
-    background-color: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    background-color: $navy;
     content: '';
     display: block;
     position: absolute;
@@ -304,10 +303,17 @@ footer {
     animation-name: openleft;
   }
   &::after {
-    background-color: rgba(0,32,63,1);
-    background-color: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
-    background-color: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+    @include four-stop-border-gradient(top, to bottom, $aqua, 0%, $navy, 36%, $navy, 64%, $aqua, 100%);
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
     left: 50%;
+    animation-direction: normal;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
     animation-name: openright;
   }
 }
