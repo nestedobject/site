@@ -308,9 +308,9 @@ footer {
     left: 50%;
     animation-name: openright;
     @include four-stop-border-gradient(top, to bottom, $aqua, 0%, $navy, 36%, $navy, 64%, $aqua, 100%);
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 0;
   }
 }
 
