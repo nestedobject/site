@@ -1,0 +1,135 @@
+html:hover,
+html:hover *,
+html:hover *::before,
+html:hover *::after,
+html:active,
+html:active *,
+html:active *::before,
+html:active *::after {
+  animation-play-state: running;
+}
+
+@keyframes height {
+  0% {
+    max-height: 100%;
+    overflow-y: visible;
+  }
+  100% {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@keyframes show {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+
+@keyframes fill0 {
+    0% { fill: $blue; }
+   10% { fill: $teal; }
+   20% { fill: $olive; }
+   30% { fill: $green; }
+   40% { fill: $lime; }
+   50% { fill: $yellow; }
+   60% { fill: $orange; }
+   70% { fill: $red; }
+   80% { fill: $fuschia; }
+   90% { fill: $orange; }
+  100% { fill: $blue; }
+}
+
+@keyframes fill1 {
+    0% { fill: $teal; }
+   10% { fill: $olive; }
+   20% { fill: $green; }
+   30% { fill: $lime; }
+   40% { fill: $yellow; }
+   50% { fill: $orange; }
+   60% { fill: $red; }
+   70% { fill: $fuschia; }
+   80% { fill: $orange; }
+   90% { fill: $blue; }
+  100% { fill: $blue; }
+}
+@keyframes fill2 {
+    0% { fill: $olive; }
+   10% { fill: $green; }
+   20% { fill: $lime; }
+   30% { fill: $yellow; }
+   40% { fill: $orange; }
+   50% { fill: $red; }
+   60% { fill: $fuschia; }
+   70% { fill: $orange; }
+   80% { fill: $blue; }
+   90% { fill: $blue; }
+  100% { fill: $teal; }
+}
+@keyframes fill3 {
+    0% { fill: $green; }
+   10% { fill: $lime; }
+   20% { fill: $yellow; }
+   30% { fill: $orange; }
+   40% { fill: $red; }
+   50% { fill: $fuschia; }
+   60% { fill: $orange; }
+   70% { fill: $blue; }
+   80% { fill: $blue; }
+   90% { fill: $teal; }
+  100% { fill: $olive; }
+}
+@keyframes fill4 {
+    0%  { fill: $lime; }
+   10%  { fill: $yellow; }
+   20%  { fill: $orange; }
+   30%  { fill: $red; }
+   40%  { fill: $fuschia; }
+   50%  { fill: $orange; }
+   60%  { fill: $blue; }
+   70%  { fill: $blue; }
+   80%  { fill: $teal; }
+   90%  { fill: $olive; }
+  100%  { fill: $green; }
+}
+@keyframes fill5 {
+    0% { fill: $yellow; }
+   10% { fill: $orange; }
+   20% { fill: $red; }
+   30% { fill: $fuschia; }
+   40% { fill: $orange; }
+   50% { fill: $blue; }
+   60% { fill: $blue; }
+   70% { fill: $teal; }
+   80% { fill: $olive; }
+   90% { fill: $green; }
+  100% { fill: $lime; }
+}
+
+@keyframes saw {
+    0% { background-position-x: 0px; }
+  100% { background-position-x: 30px; }
+}
+
+@keyframes point {
+    0% { top: -10px; }
+  100% { top: -25px; }
+}
+
+@keyframes pointwhite {
+    0% { background-position: 0 -10px; }
+  100% { background-position: 0 -25px; }
+}
+
+@keyframes openleft {
+    0% { left: 0; }
+  100% { left: -200%; }
+}
+
+@keyframes openright {
+    0% { left: 50%; }
+  100% { left: 200%; }
+}

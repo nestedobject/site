@@ -15,6 +15,16 @@ body {
   background: linear-gradient(to bottom, $red 0%,$red 30%, $navy 30%,$navy 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$red, endColorstr=$navy,GradientType=0 );
   overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: visible;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-name: height;
+
 }
 
 html {
@@ -49,4 +59,29 @@ a {
       fill: $white;
     }
   }
+}
+
+header,
+section,
+footer {
+  max-height: 0;
+  animation-duration: 0.0001s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-name: show;
+}
+
+section > div,
+footer > ul {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+section,
+footer {
+  position: relative;
 }

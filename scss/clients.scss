@@ -1,0 +1,49 @@
+.clients {
+  color: #fff;
+  padding: 4rem 0 0;
+
+  ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  li {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 6rem;
+    height: auto;
+    @media (max-width: 30em) {
+      max-width: 14rem;
+    }
+
+    svg {
+      display: inline-block;
+    }
+
+    path,
+    polygon {
+      fill: #f00;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      animation-name: fill0;
+    }
+
+    &:nth-of-type(1) path, &:nth-of-type(1) polygon { animation-name: fill1; }
+    &:nth-of-type(2) path, &:nth-of-type(2) polygon { animation-name: fill2; }
+    &:nth-of-type(3) path, &:nth-of-type(3) polygon { animation-name: fill3; }
+    &:nth-of-type(4) path, &:nth-of-type(4) polygon { animation-name: fill4; }
+    &:nth-of-type(5) path, &:nth-of-type(5) polygon { animation-name: fill5; }
+  }
+}
