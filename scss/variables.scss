@@ -1,8 +1,10 @@
 // Typography Choices
 
+$sans-serif-font: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $code-font: Menlo, Monaco, "Courier New", monospace;
 
 // Color Choices
+// From http://clrs.cc/
 $white: #fff;
 $navy: #001F3F;
 $blue: #0074D9;
@@ -20,3 +22,21 @@ $teal: #39CCCC;
 $green: #2ECC40;
 $lime: #01FF70;
 $fuschia: #F012BE;
+
+@mixin border-gradient($prefix-dir, $direction, $startcolor, $startpercent, $endcolor, $endpercent) {
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient($prefix-dir, $startcolor $startpercent, $endcolor $endpercent);
+     -moz-border-image: -moz-linear-gradient($prefix-dir, $startcolor $startpercent, $endcolor $endpercent);
+          border-image: linear-gradient($direction, $startcolor $startpercent, $endcolor $endpercent);
+  border-image-slice: 1;
+}
+
+@mixin four-stop-border-gradient($prefix-dir, $direction, $startcolor, $startpercent, $secondcolor, $secondpercent, $thirdcolor, $thirdpercent, $endcolor, $endpercent) {
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient($prefix-dir, $startcolor $startpercent, $secondcolor $secondpercent, $thirdcolor $thirdpercent, $endcolor $endpercent);
+     -moz-border-image: -moz-linear-gradient($prefix-dir, $startcolor $startpercent, $secondcolor $secondpercent, $thirdcolor $thirdpercent, $endcolor $endpercent);
+          border-image: linear-gradient($direction, $startcolor $startpercent, $secondcolor $secondpercent, $thirdcolor $thirdpercent, $endcolor $endpercent);
+  border-image-slice: 1;
+}
