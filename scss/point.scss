@@ -1,6 +1,6 @@
 .point,
 footer {
-  background-color: #2ECC40;
+  background-color: $green;
 }
 
 .point::before,
@@ -53,14 +53,14 @@ footer {
 
 
 footer {
-  color: #111;
+  color: $black;
   font-size: .6rem;
   position: relative;
   height: 2rem;
 
   path,
   polygon {
-    fill:  #111;
+    fill:  $black;
   }
 
   a:hover,

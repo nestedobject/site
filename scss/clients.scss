@@ -1,5 +1,5 @@
 .clients {
-  color: #fff;
+  color: $white;
   padding: 4rem 0 0;
 
   ul {
@@ -30,7 +30,7 @@
 
     path,
     polygon {
-      fill: #f00;
+      fill: $red;
       animation-duration: 10s;
       animation-timing-function: linear;
       animation-direction: alternate;

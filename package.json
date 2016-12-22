@@ -1,6 +1,6 @@
 {
   "name": "nested-object-site",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Website for Nested Object",
   "engines": {
     "node": "6.9.1"
