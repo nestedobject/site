@@ -1,34 +1,3 @@
-html:hover,
-html:hover *,
-html:hover *::before,
-html:hover *::after,
-html:active,
-html:active *,
-html:active *::before,
-html:active *::after {
-  animation-play-state: running;
-}
-
-@keyframes height {
-  0% {
-    max-height: 100%;
-    overflow-y: visible;
-  }
-  100% {
-    max-height: none;
-    overflow-y: visible;
-  }
-}
-
-@keyframes show {
-  0% {
-    max-height: 0;
-  }
-  100% {
-    max-height: 100%;
-  }
-}
-
 @keyframes fill0 {
     0% { fill: $blue; }
    10% { fill: $teal; }
