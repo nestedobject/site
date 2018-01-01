@@ -22,6 +22,6 @@ If you're developing on the site:
 
 ---
 
-© 2016 Nested Object LLC
+© 2018 Nested Object LLC
 
 MIT License
